@@ -1,0 +1,16 @@
+[Unit]
+Description=Last Server Standing High-Performance Production API Server
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/last-server-standing
+ExecStart=/usr/bin/node src/server.js
+Restart=always
+RestartSec=1
+LimitNOFILE=65535
+Environment=NODE_ENV=production PORT=8080 HOST=0.0.0.0
+
+[Install]
+WantedBy=multi-user.target

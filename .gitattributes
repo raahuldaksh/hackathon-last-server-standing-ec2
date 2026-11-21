@@ -1,0 +1,12 @@
+# Force GitHub Linguist to recognize repository as pure JavaScript backend
+* linguist-vendored
+src/** -linguist-vendored
+src/**/*.js linguist-detectable=true
+src/**/*.js linguist-language=JavaScript
+tests/** -linguist-vendored
+tests/**/*.js linguist-detectable=true
+tests/**/*.js linguist-language=JavaScript
+docs/** linguist-documentation
+deploy/** linguist-documentation
+*.html linguist-detectable=false
+*.html linguist-vendored
